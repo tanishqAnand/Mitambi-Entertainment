@@ -1,0 +1,23 @@
+.container {
+    border: 2px #d52d89 solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.body-head {
+    text-align: center;
+}
+
+.body-head p {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+label {
+    padding-top: 6px;
+}
+
+.button {
+    text-align: center;
+}

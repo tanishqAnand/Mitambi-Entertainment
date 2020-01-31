@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/css-reset.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/form.css">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm body-head">
+            <p><i class="fas fa-caret-right"></i>Contact Us</p>
+        </div>
+    </div>
+    <form method="POST" action="/marketing/contact-us/">
+        {% csrf_token %}
+        <!-- Full Name -->
+        <div class="form-group row">
+            <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="namefield" id="namefield" required>
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group row">
+            <label for="email" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="emailfield" id="emailfield" required>
+            </div>        
+        </div>
+
+        <!-- Subject -->
+        <div class="form-group row">
+            <label for="subject" class="col-sm-4 col-form-label">Subject</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="subjectfield" id="subjectfield" required>
+            </div>        
+        </div>
+
+        <!-- Queries -->
+        <div class="form-group row">
+            <label for="queries" class="col-sm-4 col-form-label">Queries</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="queries" id="queries" rows="3" required></textarea>
+            </div>        
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-4"></div>
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-info">Submit</button>
+              </div>
+            </div>
+            <div class="col-sm-4"></div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="description" content="Mitambi entertainment is a leading company in influencer marketing. Our goal is to provide brands the best influencer for their product by analysing all kind of data available. we are a team of young data analysts and content creators that are expert in their field.
+        Mitambi entertainment is also very beneficial for young influencer who just have started their career as we provide these young talent with lots of opportunity in the marketing industry.">
+
+        <!-- Bootstrap CSS -->
+        {% block css %}
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <link rel="stylesheet" href="/static/css/css-reset.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        {% endblock %}
+
+        <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome js -->
+        <script src="https://kit.fontawesome.com/21edb5083e.js" crossorigin="anonymous"></script>
+
+
+        {% block title %}
+        <title>Mitambi Entertainment - Simple|Marketing|Solutions</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div class="bar container-fluid"></div>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm logo">
+                        <a href="/marketing"><img src="/static/images/logo.png" alt="logo for mitambi marketing"></a>
+                    </div>
+                    <div class="col-sm">
+                        <div class="head">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <p id="heading1">Mitambi</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <p id="heading2">Simple | Marketing | Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="sub-head">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <p id="heading3"><i class="fas fa-envelope"></i>Email us</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <p id="heading4">contact@mitambi.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="container-fluid">
+                <a href="/" class="navbutton">
+                    <i class="fas fa-home"></i>Home
+                </a>
+                <a href="/marketing/about-us" class="navbutton">
+                    <i class="fas fa-address-card"></i>About Us
+                </a>
+                <a href="/marketing/contact-us" class="navbutton">
+                    <i class="fas fa-phone-alt"></i>Contact Us
+                </a>
+                <!-- <a href="/marketing/privacy" class="navbutton">
+                    <i class="fas fa-user-secret"></i>Privacy Policy
+                </a> -->
+        
+                <div class="social_links">
+                    <a href="https://www.facebook.com/Mitambi-entertainment-112666410279091/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/mitambi_entertainment/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </nav>
+
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+
+                    <div class="row">
+                        <div class="col-sm desc-head">
+                            <p id="heading5">Mitambi</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm desc-subhead">
+                            <p id="heading6">Simple | Marketing | Solution</p>
+                        </div>
+                    </div>
+
+                    <div class="white-underline"></div>
+
+                    <div class="row">
+                        <div class="col-sm desc-p">
+                            <p id="heading7">Mitambi entertainment is a leading company in influencer marketing. Our goal is to provide brands the best influencer for their product by analysing all kind of data available. we are a team of young data analysts and content creators that are expert in their field....
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm read-more">
+                            <a href="/marketing/about-us">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm nav-head">
+                    <div class="row">
+                        <div class="col-sm">
+                            <p id="heading8">Navigation</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm nav-items">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/marketing/about-us">About us</a></li>
+                                <li><a href="/marketing/contact-us">Contact us</a></li>
+                                <li><a href="/static/PrivacyPolicy.pdf">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm contact-head">
+                            <p id="heading9">Contact Us</p>
+                        </div>
+                    </div>
+                    <div class="white-underline"></div>
+                    <div class="row">
+                        <div class="col-sm contact-p">
+                            <p id="heading10">Email: contact@mitambi.com</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm contact-social">
+                            <p id="heading11">
+                                <a href="https://www.facebook.com/Mitambi-entertainment-112666410279091/" target="_blank"><i class="fab fa-facebook-square">
+                                </i></a>
+                                <a href="https://www.instagram.com/mitambi_entertainment/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="container-fluid copyright">
+            <div class="row">
+                <div class="col-sm col-md-2"></div>
+                <div class="col-sm col-md-8 copyright-text">
+                    <p>©2020 Mitambi Entertainment. All Rights Reserved | Design by Mitambi Web Services</p>
+                </div>
+                <div class="col-sm col-md-2 location">
+                    <p><i class="fas fa-map-marker-alt"></i>Delhi, India</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

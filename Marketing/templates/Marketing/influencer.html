@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/css-reset.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/form.css">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm body-head">
+            <p><i class="fas fa-caret-right"></i>Influencer Details</p>
+        </div>
+    </div>
+    <form method="POST" action="/marketing/influencer/">
+        {% csrf_token %}
+        <!-- Full Name -->
+        <div class="form-group row">
+            <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="namefield" id="namefield" required>
+            </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group row">
+            <div class="col-sm-4">Gender</div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Male" id="Male">
+                    <label class="form-check-label" for="gender">
+                    Male
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Female" id="Female">
+                    <label class="form-check-label" for="gender">
+                    Female
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Email -->
+        <div class="form-group row">
+          <label for="email" class="col-sm-4 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" name="emailfield" id="emailfield" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>        
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group row">
+          <label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" name="phone" id="phone">
+          </div>
+        </div>
+        
+        <!-- DOB -->
+        <div class="form-group row">
+            <label for="dob" class="col-sm-4 col-form-label">Date Of Birth</label>
+            <div class="col-sm-8">
+              <input type="date" class="form-control" name="dob" id="dob">
+            </div>
+        </div>
+
+        <!-- Preferred Language -->
+        <div class="form-group row">
+            <label for="language" class="col-sm-4 col-form-label">Preferred Language</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="language" id="language">
+            </div>
+        </div>
+
+        <!-- Social Links -->
+
+        <div class="form-group row">
+            <label for="fb" class="col-sm-4 col-form-label">Facebook Profile/Page Url</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="fb" id="fb">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="instagram" class="col-sm-4 col-form-label">Instagram Handle</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="instagram" id="instagram">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="tiktok" class="col-sm-4 col-form-label">Tiktok Username</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="tiktok" id="tiktok">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="youtube" class="col-sm-4 col-form-label">Youtube Channel Url</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="youtube" id="youtube">
+            </div>
+        </div>
+
+        <!-- Target Audience -->
+        <div class="form-group row">
+            <div class="col-sm-4">Target Audience</div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Technology" id="Technology">
+                    <label class="form-check-label" for="Technology">
+                        Technology
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Sports" id="Sports">
+                    <label class="form-check-label" for="Sports">
+                        Sports
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Gaming" id="Gaming">
+                    <label class="form-check-label" for="Gaming">
+                        Gaming
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Educational" id="Educational">
+                    <label class="form-check-label" for="Educational">
+                        Educational
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Entertainment" id="Entertainment">
+                    <label class="form-check-label" for="Entertainment">
+                        Entertainment
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Travel/Vlog" id="Travel/Vlog">
+                    <label class="form-check-label" for="Travel/Vlog">
+                        Travel/Vlog
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Motivational" id="Motivational">
+                    <label class="form-check-label" for="Motivational">
+                        Motivational
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Beauty" id="Beauty">
+                    <label class="form-check-label" for="Beauty">
+                        Beauty
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Lifestyle" id="Lifestyle">
+                    <label class="form-check-label" for="Lifestyle">
+                        Lifestyle
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Health" id="Health">
+                    <label class="form-check-label" for="Health">
+                        Health
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Cooking/Food" id="Cooking/Food">
+                    <label class="form-check-label" for="Cooking/Food">
+                        Cooking/Food
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+        <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+        <div class="col-sm-4"></div>
+      </form>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/Users/Tanishq/Projects/bin/python3",
+    "python.autoComplete.extraPaths":
+        [
+            "/Users/Tanishq/Desktop/Projects/lib/python3.7",
+        ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}

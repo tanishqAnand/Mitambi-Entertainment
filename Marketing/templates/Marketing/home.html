@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/css-reset.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/home.css">
+{% endblock %}
+
+
+{% block main %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm influencer-img">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="/marketing/influencer">
+                        <p>I'm an Influencer
+                            <i class="fas fa-location-arrow"></i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm brand-img">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="/marketing/brand">
+                        <p>I'm a Brand
+                            <i class="fas fa-location-arrow"></i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm home-head">
+                <p>
+                    <i class="fas fa-caret-right"></i>
+                    About Us</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm about-text">
+                <p>
+                Mitambi entertainment is a leading company in influencer marketing.
+                Our goal is to provide brands the best influencer for their product by analysing 
+                all kind of data available. we are a team of young data analysts and content creators
+                that are expert in their field.
+                <br>
+                Mitambi entertainment is also very beneficial for young influencer who just have started their
+                career as we provide these young talent with lots of opportunity in the marketing industry.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid categories-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm home-head">
+                <p>
+                    <i class="fas fa-caret-right"></i>
+                    Categories
+                </p>
+            </div>
+        </div>
+
+        <!-- Nested rows and columns for categories icons -->
+        <div class="row">
+            <div class="col-sm icons">
+                <div class="row">
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/technology.svg" alt="icon for technology category">
+                        <p>Technology</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/sports.svg" alt="icon for sports category">
+                        <p>Sports</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/gaming.svg" alt="icon for gaming category">
+                        <p>Gaming</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/education.svg" alt="icon for education category">
+                        <p>Education</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/entertainment.svg" alt="icon for entertainment category">
+                        <p>Entertainment</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/travel.svg" alt="icon for travel category">
+                        <p>Travel</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/motivational.svg" alt="icon for motivational category">
+                        <p>Motivational</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/beauty.svg" alt="icon for beauty category">
+                        <p>Beauty</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/lifestyle.svg" alt="icon for lifestyle category">
+                        <p>Lifestyle</p>
+                    </div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/health.svg" alt="icon for health category">
+                        <p>Health</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm categories"></div>
+                    <div class="col-sm categories"></div>
+                    <div class="col-sm categories">
+                        <img src="/static/images/categories/food.svg" alt="icon for food category">
+                        <p>Cooking/Food</p>
+                    </div>
+                    <div class="col-sm categories"></div>
+                    <div class="col-sm categories"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid platforms">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm home-head">
+                <p><i class="fas fa-caret-right"></i>
+                    Platforms We Work On</p>
+            </div>
+        </div>
+        <!-- Social Icons -->
+        <div class="row">
+            <div class="col-sm social-icons">
+                <img src="/static/images/icons/facebook.svg" alt="facebook logo">
+            </div>
+            <div class="col-sm social-icons">
+                <img src="/static/images/icons/instagram.svg" alt="instagram logo">
+            </div>
+            <div class="col-sm social-icons">
+                <img src="/static/images/icons/Tiktok.png" alt="tiktok logo">
+            </div>
+            <div class="col-sm social-icons">
+                <img src="/static/images/icons/youtube.svg" alt="youtube logo">
+            </div>
+            <div class="col-sm social-icons">
+                <img src="/static/images/icons/linkedin.svg" alt="linkedin logo">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nested rows for services -->
+<div class="container-fluid services-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm home-head">
+                <p>
+                    <i class="fas fa-caret-right"></i>
+                    Services We Provide
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm services">
+                <div class="row">
+                    <div class="col-sm services-icons">
+                        <img src="/static/images/services/ad.svg" alt="">
+                        <p>Brand Advertisement</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm services-icons">
+                        <img src="/static/images/services/content.svg" alt="">
+                        <p>Content Creation</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm services-icons">
+                        <img src="/static/images/services/shout.svg" alt="">
+                        <p>Event Promotion</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm services-icons">
+                        <img src="/static/images/services/review.svg" alt="">
+                        <p>Product Review</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Map -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm home-head">
+                <p>
+                    <i class="fas fa-caret-right"></i>
+                    Our Strong Hold
+                </p>
+            </div>
+        </div>
+
+        <div class="row strong-hold">
+            <div class="col-sm map-image">
+            </div>
+            <div class="col-sm states">
+                <ul>
+                    <li><i class="fas fa-dot-circle"></i>Uttar Pradesh</li>
+                    <li><i class="fas fa-dot-circle"></i>Delhi</li>
+                    <li><i class="fas fa-dot-circle"></i>Bihar</li>
+                    <li><i class="fas fa-dot-circle"></i>Punjab</li>
+                    <li><i class="fas fa-dot-circle"></i>Haryana</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- <div class="Influencers">
+            <h3>
+                <i class="fas fa-caret-right"></i>
+                Influencers We Work With
+            </h3>
+        </div> -->
+
+<!-- <div class="Brands">
+            <h3>
+                <i class="fas fa-caret-right"></i>
+                Brands
+            </h3>
+</div> -->
+{% endblock %}

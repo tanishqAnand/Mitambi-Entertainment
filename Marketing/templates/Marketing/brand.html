@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/css-reset.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/form.css">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col body-head">
+            <p><i class="fas fa-caret-right"></i>Brand Details</p>
+        </div>
+    </div>
+    <form method="POST" action="/marketing/brand/">
+        {% csrf_token %}
+        <!-- Full Name -->
+        <div class="form-group row">
+            <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="namefield" id="namefield" required>
+            </div>
+        </div>
+
+        <!-- Company Name -->
+        <div class="form-group row">
+            <label for="company-name" class="col-sm-4 col-form-label">Company Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="companyfield" id="companyfield" required>
+            </div>
+        </div>
+
+        
+        <!-- Email -->
+        <div class="form-group row">
+          <label for="email" class="col-sm-4 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" name="emailfield" id="emailfield" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>        
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-group row">
+            <label for="productdesc" class="col-sm-4 col-form-label">Product Description</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="productdesc" id="productdesc" rows="3" required></textarea>
+            </div>        
+          </div>
+
+        <!-- Target Audience -->
+        <div class="form-group row">
+            <div class="col-sm-4">Target Audience</div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Technology" id="Technology">
+                    <label class="form-check-label" for="Technology">
+                        Technology
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Sports" id="Sports">
+                    <label class="form-check-label" for="Sports">
+                        Sports
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Gaming" id="Gaming">
+                    <label class="form-check-label" for="Gaming">
+                        Gaming
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Educational" id="Educational">
+                    <label class="form-check-label" for="Educational">
+                        Educational
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Entertainment" id="Entertainment">
+                    <label class="form-check-label" for="Entertainment">
+                        Entertainment
+                    </label>
+                </div>
+            </div><div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Travel" id="Travel">
+                    <label class="form-check-label" for="Travel">
+                        Travel/Vlog
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Motivational" id="Motivational">
+                    <label class="form-check-label" for="Motivational">
+                        Motivational
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Beauty" id="Beauty">
+                    <label class="form-check-label" for="Beauty">
+                        Beauty
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Lifestyle" id="Lifestyle">
+                    <label class="form-check-label" for="Lifestyle">
+                        Lifestyle
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Health" id="Health">
+                    <label class="form-check-label" for="Health">
+                        Health
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Cooking" id="Cooking">
+                    <label class="form-check-label" for="Cooking">
+                        Cooking/Food
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="choice" class="col-sm-4 col-form-label">Choice of influencer (if any)</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="choice" id="choice">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+        <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+        <div class="col-sm-4"></div>
+      </form>
+</div>
+{% endblock %}

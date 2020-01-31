@@ -1,0 +1,161 @@
+
+
+.influencer-img {
+    background-image: url(/static/images/influencer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.brand-img {
+    background-image: url(/static/images/brand.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.influencer-img p, .brand-img p {
+    margin-top: 300px;
+    font-size: 1.4rem;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #b03378;
+    background-color: #faf9f9;
+    padding: 30px;
+    color: #333333;
+}
+
+.influencer-img a, .brand-img a {
+    text-decoration: none;
+}
+
+.influencer-img p:hover, .brand-img p:hover {
+    background-color: #333333;
+    border-color: #333333;
+    color: #ffffff;
+    transition-duration: 0.3s;
+}
+
+.about-us {
+    background-color: #f7f7f7;
+    min-height: 200px;
+}
+
+.home-head {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.15rem;
+    font-weight: 100;
+    color: #666666;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+.categories-background {
+    background-image: url(/static/images/categories.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 200px;
+}
+
+.icons {
+    padding: 10px;
+}
+
+.categories {
+    text-align: center;
+}
+
+.categories img {
+    height: 60px;
+    width: 50px;
+    margin-top: 30px;
+}
+
+.categories p {
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.platforms {
+    background-color: #ffffff;
+    min-height: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #333333;
+}
+
+.social-icons {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.social-icons img {
+    height: 50px;
+    width: 64px;
+}
+
+.services-background {
+    background-color: #f7f7f7;
+}
+
+.services {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.services-icons {
+    text-align: center;
+    padding: 30px;
+}
+
+.services-icons img {
+    height: 50px;
+    width: 60px;
+}
+
+.services-icons p {
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.strong-hold {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.map-image {
+    background-image: url(/static/images/map.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 600px;
+    width: 600px;
+    padding-left: 300px;
+}
+
+.states {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.states li {
+    font-size: 1.2rem;
+    padding: 20px;
+}
