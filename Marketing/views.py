@@ -104,6 +104,7 @@ def influencer(request):
 
         details = influencer_detail(fullname=fullname, male=male, female=female, phone_no=phone_no, date_of_birth=date_of_birth, preferred_lang=preferred_lang, fb_url=fb_url, insta_url=insta_url, tiktok_url=tiktok_url, youtube_url=youtube_url, email=email, technology=technology, sports=sports, gaming=gaming, educational=educational, entertainment=entertainment, travel=travel, motivational=motivational, beauty=beauty, lifestyle=lifestyle, health=health, cooking=cooking)
         details.save()
+        return render(request, 'Marketing/thanks.html')
     return render(request, 'Marketing/influencer.html')
 
 def brand(request):
@@ -182,6 +183,7 @@ def brand(request):
 
         details = brand_detail(fullname=fullname,  company=company, email=email, prod_desc=prod_desc, technology=technology, sports=sports, gaming=gaming, educational=educational, entertainment=entertainment, travel=travel, motivational=motivational, beauty=beauty, lifestyle=lifestyle, health=health, cooking=cooking)
         details.save()
+        return render(request, 'Marketing/thanks.html')
     return render(request, 'Marketing/brand.html')
 
 def contact_us(request):
@@ -192,6 +194,7 @@ def contact_us(request):
         queries = request.POST.get('queries', '')
         details = contact(fullname=fullname,  email=email, subject=subject, queries=queries)
         details.save()
+        return render(request, 'Marketing/thanks.html')
     return render(request, 'Marketing/contact_us.html')
 
 def join(request):
@@ -201,4 +204,5 @@ def join(request):
         skills = request.POST.get('skills', '')
         details = application(name=name, phone_no= phone_no, skills=skills)
         details.save()
+        return render(request, 'Marketing/thanks.html')
     return render(request, 'Marketing/join.html')
