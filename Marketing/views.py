@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from Marketing.models import contact, influencer_detail, brand_detail
+from Marketing.models import contact, influencer_detail, brand_detail, application
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'marketing/home.html')
+    return render(request, 'Marketing/home.html')
 
 def about_us(request):
-    return render(request, 'marketing/about_us.html')
+    return render(request, 'Marketing/about_us.html')
 
 def influencer(request):
     if request.method == "POST":
@@ -104,7 +104,7 @@ def influencer(request):
 
         details = influencer_detail(fullname=fullname, male=male, female=female, phone_no=phone_no, date_of_birth=date_of_birth, preferred_lang=preferred_lang, fb_url=fb_url, insta_url=insta_url, tiktok_url=tiktok_url, youtube_url=youtube_url, email=email, technology=technology, sports=sports, gaming=gaming, educational=educational, entertainment=entertainment, travel=travel, motivational=motivational, beauty=beauty, lifestyle=lifestyle, health=health, cooking=cooking)
         details.save()
-    return render(request, 'marketing/influencer.html')
+    return render(request, 'Marketing/influencer.html')
 
 def brand(request):
     if request.method == "POST":
@@ -182,7 +182,7 @@ def brand(request):
 
         details = brand_detail(fullname=fullname,  company=company, email=email, prod_desc=prod_desc, technology=technology, sports=sports, gaming=gaming, educational=educational, entertainment=entertainment, travel=travel, motivational=motivational, beauty=beauty, lifestyle=lifestyle, health=health, cooking=cooking)
         details.save()
-    return render(request, 'marketing/brand.html')
+    return render(request, 'Marketing/brand.html')
 
 def contact_us(request):
     if request.method == "POST":
@@ -192,4 +192,13 @@ def contact_us(request):
         queries = request.POST.get('queries', '')
         details = contact(fullname=fullname,  email=email, subject=subject, queries=queries)
         details.save()
-    return render(request, 'marketing/contact_us.html')
+    return render(request, 'Marketing/contact_us.html')
+
+def join(request):
+    if request.method == 'POST':
+        name = request.POST.get('namefield', '')
+        phone_no = request.POST.get('phone', '')
+        skills = request.POST.get('skills', '')
+        details = application(name=name, phone_no= phone_no, skills=skills)
+        details.save()
+    return render(request, 'Marketing/join.html')

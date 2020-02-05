@@ -15,7 +15,7 @@ class influencer_detail(models.Model):
     male = models.BooleanField(default=False, blank=True)
     female = models.BooleanField(default=False, blank=True)
     email = models.EmailField()
-    phone_no = models.CharField(max_length=20)
+    phone_no = models.CharField(max_length=13)
     date_of_birth = models.DateField()
     preferred_lang = models.CharField(max_length=20, blank=True)
     
@@ -62,3 +62,11 @@ class brand_detail(models.Model):
 
     def __str__(self):
         return self.fullname
+
+class application(models.Model):
+    name = models.CharField(max_length=50)
+    phone_no = models.CharField(max_length=10)
+    skills = models.TextField(max_length=200)
+
+    def __str__(self):
+        return self.name

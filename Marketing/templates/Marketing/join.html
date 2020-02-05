@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<link rel="stylesheet" href="/static/css/css-reset.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/form.css">
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm body-head">
+            <p><i class="fas fa-caret-right"></i>Work With Us</p>
+        </div>
+    </div>
+    <form method="POST" action="/marketing/join/">
+        {% csrf_token %}
+        <!-- Full Name -->
+        <div class="form-group row">
+            <label for="fullname" class="col-sm-4 col-form-label">Full Name</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="namefield" id="namefield" placeholder="Enter Your Name" required>
+            </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group row">
+          <label for="phone" class="col-sm-4 col-form-label">Whatsapp Number</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" name="phone" id="phone" placeholder="+91" required>
+          </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="form-group row">
+            <label for="skills" class="col-sm-4 col-form-label">Skills</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" name="skills" id="skills" rows="3" required></textarea>
+            </div>        
+        </div>
+        
+        <div class="form-group row">
+        <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+        <div class="col-sm-4"></div>
+      </form>
+</div>
+{% endblock %}
